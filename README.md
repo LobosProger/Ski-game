@@ -15,13 +15,13 @@ https://github.com/LobosProger/Ski-game/assets/78168123/bfa9c936-dc5a-4355-9376-
 
 ## Gameplay Overview
 
-Check out the gameplay video to get a glimpse of the thrilling skiing experience. Here's a breakdown of the gameplay:
+Check out the gameplay video! Here's a breakdown of the gameplay:
 
 - **Objective:** Reach the red finish flags, passing through other flags. Missing flags results in additional time added to the timer.
 - **Boostable Flags:** Some flags provide a speed boost, helping you navigate the course faster.
 - **Space Key:** Press the space key for a temporary speed boost.
 - **Obstacles:** Encounter interactive obstacles that can slow you down or set you back.
 - **Audio Effects:** Enjoy immersive audio sounds, including boosting sounds, collision sounds with obstacles, and flag passing sounds.
-- **Race Finish:** After completing a race, view your best records, switch to the next race, or retry to set a new record.
+- **Race Finish:** After completing a race, view your best records (they also saving into memory by PlayerPrefs), switch to the next race, or retry to set a new record.
 
 https://github.com/LobosProger/Ski-game/assets/78168123/086895a1-7a8b-4f9a-8c9b-7de90662686c

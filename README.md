@@ -1,18 +1,27 @@
-# Ski game
-Developed ski game during preparation to certification on Associate Programmer by Unity. In developed game there is implemented architecture pattern, called as Observer. This is pattern,
-which provide to write more modular and maintainable code, basing on event system, without direct referencing to objects to call some type function.
+# Ski Game
 
-## Main menu
+This game was developed as part of the preparation for the Unity Associate Programmer certification. The game features an architecture pattern known as the Observer pattern. This pattern enhances code modularity and maintainability by utilizing an event system, eliminating the need for direct object references to execute specific functions.
 
-In the main menu you can click on the help menu to read, how to play in the game, quit from game, start and there is a small "easter egg" - when you move cursor of mouse on the title of game,
-it is starting change in width:
+## Main Menu
+
+In the main menu, you'll find various options:
+
+- **Help Menu:** Learn how to play the game.
+- **Quit:** Exit the game.
+- **Start:** Begin your skiing adventure.
+- **Easter Egg:** Move your mouse cursor over the game title to witness a playful width-changing animation.
 
 https://github.com/LobosProger/Ski-game/assets/78168123/bfa9c936-dc5a-4355-9376-c87b2793f837
 
-## Gameplay video
+## Gameplay Overview
 
-In the below gameplay video you can see, how this game represented. Player has a goal - reach to the red finish flaqs, passing also another flaqs, if he doesn't do it - adding additional time to the timer.
-There are also additional flaqs, which are "boostable", they add additional speed to the player on the time. Player can move faster by just clicking Space keycode. And there are interactable obstacles,
-with which player can face, slowing him and catching to backward. After finishing, player can see his reached best records on the table, switch next race or retry the race to try set best record:
+Check out the gameplay video to get a glimpse of the thrilling skiing experience. Here's a breakdown of the gameplay:
+
+- **Objective:** Reach the red finish flags, passing through other flags. Missing flags results in additional time added to the timer.
+- **Boostable Flags:** Some flags provide a speed boost, helping you navigate the course faster.
+- **Space Key:** Press the space key for a temporary speed boost.
+- **Obstacles:** Encounter interactive obstacles that can slow you down or set you back.
+- **Audio Effects:** Enjoy immersive audio sounds, including boosting sounds, collision sounds with obstacles, and flag passing sounds.
+- **Race Finish:** After completing a race, view your best records, switch to the next race, or retry to set a new record.
 
 https://github.com/LobosProger/Ski-game/assets/78168123/086895a1-7a8b-4f9a-8c9b-7de90662686c

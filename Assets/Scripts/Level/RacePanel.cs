@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,29 +13,33 @@ public class RacePanel : MonoBehaviour
     [SerializeField] private Button nextRaceButton;
     [SerializeField] private Button quitButton;
 
-    public static RacePanel singleton;
-
-    private void Start()
+	private void Start()
 	{
-        RaceEvents.OnRaceFinished += () => ShowButtonsPanel(true);
-        RaceEvents.OnRaceLoaded += () => ShowLoadingOverlayImage(false);
+		RaceEvents.OnRaceFinished += () => ShowButtonsPanel(true);
 
-        retryButton.onClick.AddListener(OnClickedRetryButton);
+		retryButton.onClick.AddListener(OnClickedRetryButton);
         nextRaceButton.onClick.AddListener(OnClickedNextRaceButton);
         quitButton.onClick.AddListener(OnClickedQuitButton);
 	}
 
-    private void OnClickedRetryButton()
+	private void OnDestroy()
+	{
+		RaceEvents.OnRaceFinished -= () => ShowButtonsPanel(true);
+
+		retryButton.onClick.RemoveListener(OnClickedRetryButton);
+		nextRaceButton.onClick.RemoveListener(OnClickedNextRaceButton);
+		quitButton.onClick.RemoveListener(OnClickedQuitButton);
+	}
+
+	private void OnClickedRetryButton()
     {
         ShowButtonsPanel(false);
-        ShowLoadingOverlayImage(true);
         RaceLevelManager.singleton.RestartCurrentLevel();
     }
 
     private void OnClickedNextRaceButton()
     {
 		ShowButtonsPanel(false);
-		ShowLoadingOverlayImage(true);
 		RaceLevelManager.singleton.NextRaceLevel();
 	}
 
@@ -45,12 +50,12 @@ public class RacePanel : MonoBehaviour
 	}
 
 	private void ShowButtonsPanel(bool show)
-    {
-        buttonsPanel.SetActive(show);
-    }
-
-    private void ShowLoadingOverlayImage(bool show)
-    {
-        loadingScreenImage.enabled = show;
+     {
+		// Fixed solution on time. Because on unknown reason there are two gameobjects Race panel after restarting race
+		// and first - null, second - placed on scene
+        if(buttonsPanel != null)
+        {
+			buttonsPanel.SetActive(show);
+		}
     }
 }
